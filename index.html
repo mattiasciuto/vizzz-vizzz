@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIZZZ.VIZZZ — Visual Studio · Videomapping · Stage &amp; Light Design</title>
+  <meta name="description" content="VIZZZVIZZZ è un'associazione culturale e network di artisti e tecnici specializzati in VJing, videomapping, installazioni interattive e light/stage design, attivo tra Sicilia e Milano.">
+  <meta name="theme-color" content="#050507">
+  <meta property="og:title" content="VIZZZ.VIZZZ — Ricerca radicale. Visione totale.">
+  <meta property="og:description" content="VJing, videomapping, installazioni immersive e stage design per club, festival ed eventi culturali.">
+  <meta property="og:image" content="assets/img/stage-02.jpg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@300;500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ===== ANIMATED CODE BACKGROUND ===== -->
+  <canvas id="codebg" aria-hidden="true"></canvas>
+  <div class="fx-scan" aria-hidden="true"></div>
+  <div class="fx-noise" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <img src="assets/logo.svg" alt="" class="boot-logo">
+      <pre class="boot-log" id="bootLog"></pre>
+      <div class="boot-bar"><span id="bootBar"></span></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="hdr" id="hdr">
+    <a href="#home" class="hdr-brand" aria-label="VIZZZ.VIZZZ home">
+      <img src="assets/logo.svg" alt="" width="34" height="34">
+      <span class="hdr-name">VIZZZ<i>.</i>VIZZZ</span>
+    </a>
+    <nav class="hdr-nav" id="nav" aria-label="Navigazione principale">
+      <a href="#home" data-n="00">Home</a>
+      <a href="#chi-siamo" data-n="01">Chi siamo</a>
+      <a href="#cosa-facciamo" data-n="02">Cosa facciamo</a>
+      <a href="#tecnologie" data-n="03">Tecnologie</a>
+      <a href="#spazio-e-linguaggi" data-n="04">Spazio e linguaggi</a>
+      <a href="#portfolio" data-n="05">Portfolio</a>
+      <a href="#contatti" data-n="06">Contatti</a>
+    </nav>
+    <div class="hdr-hud" aria-hidden="true"><span class="rec"></span><span id="clock">00:00:00</span></div>
+    <button class="hdr-burger" id="burger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="hero" data-hue="232">
+      <div class="hero-meta hero-meta--tl" aria-hidden="true">
+        <span>// NODO DI INTERVENTO VISIVO</span>
+        <span>SICILIA ⟷ MILANO</span>
+      </div>
+      <div class="hero-meta hero-meta--tr" aria-hidden="true">
+        <span>EST. 2022</span>
+        <span id="coords">37.5079° N — 15.0830° E</span>
+      </div>
+
+      <div class="hero-center">
+        <p class="hero-kicker reveal">ASSOCIAZIONE CULTURALE · VISUAL COLLECTIVE</p>
+        <h1 class="wordmark" data-text="VIZZZVIZZZ" aria-label="VIZZZVIZZZ">
+          <span class="wm-line wm-line--1"></span>
+          <span class="wm-line wm-line--2"></span>
+          VIZZZVIZZZ
+        </h1>
+        <p class="hero-sub">
+          <span>V I S U A L</span><span>S T U D I O —</span><span>S T A G E</span>
+          <span>D E S I G N —</span><span>L I G H T</span><span>D E S I G N &nbsp;// &nbsp;2 0 2 2</span>
+        </p>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-quote">"ORDINE È IL RISULTATO.<br><s>DISORDINE È IL PROCESSO.</s>"</p>
+        <a href="#chi-siamo" class="scroll-cue" aria-label="Scorri giù"><span>SCROLL</span><i></i></a>
+        <p class="hero-tags">VJING · VIDEOMAPPING · INSTALLAZIONI INTERATTIVE · LIGHT/STAGE DESIGN</p>
+      </div>
+    </section>
+
+    <!-- ===== SHOWREEL STRIP ===== -->
+    <section class="reel" aria-label="Showreel">
+      <div class="reel-track" id="reelTrack">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== CHI SIAMO ===== -->
+    <section id="chi-siamo" class="sec sec-about" data-hue="265">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title scramble">chi siamo</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead reveal">NEL CUORE PULSANTE DELLA NOTTE, DOVE IL SUONO PLASMA LO SPAZIO E IL BUIO DIVENTA TELA, <b>VIZZZVIZZZ</b> SI INSERISCE COME NODO DI INTERVENTO VISIVO.</p>
+          <p class="reveal">FONDATA NEL 2022 L'ASSOCIAZIONE CULTURALE È UN NETWORK DI ARTISTI E TECNICI SPECIALIZZATI IN VJING, VIDEOMAPPING, INSTALLAZIONI INTERATTIVE E LIGHT/STAGE DESIGN, ATTIVO TRA SICILIA E MILANO.</p>
+          <p class="reveal">IL COLLETTIVO VIZZZVIZZZ CONDUCE UNA RICERCA NON CONVENZIONALE SULLO SPAZIO E SUI LINGUAGGI CONTEMPORANEI, ESPLORANDO LA SPERIMENTAZIONE IN TUTTE LE SUE FORME — MEDIALI, INTERATTIVE E PERFORMATIVE.</p>
+          <p class="reveal hl">IL SUO LAVORO TRASFORMA IL DISTURBO VISIVO IN LINGUAGGIO, CODIFICA IL CAOS, RENDE POETICO L'ERRORE.</p>
+          <p class="reveal">IN UN MONDO AL CONFINE TRA REALE E DIGITALE, VIZZZVIZZZ GENERA NARRAZIONI ED EMOZIONI NEI CONTESTI DELLA VITA NOTTURNA E MUSEALE. OGNI EVENTO È UN'OCCASIONE PER RIDEFINIRE QUEL CONFINE.</p>
+        </div>
+
+        <div class="about-media">
+          <figure class="frame frame--a reveal">
+            <video muted loop playsinline preload="none" data-src="assets/video/drom-ologram.mp4" poster="assets/video/drom-ologram.jpg"></video>
+            <figcaption>REC ● DRØM // OLOGRAM</figcaption>
+          </figure>
+          <figure class="frame frame--b reveal">
+            <img src="assets/img/map-07.jpg" alt="Proiezione di codice su architettura durante un live visual" loading="lazy">
+            <figcaption>CODE_MAPPING.EXE</figcaption>
+          </figure>
+          <figure class="frame frame--c reveal">
+            <img src="assets/img/inst-11.jpg" alt="Installazione luminosa VIZZZVIZZZ" loading="lazy">
+            <figcaption>INSTALLAZIONE // 2024</figcaption>
+          </figure>
+          <div class="about-stats reveal">
+            <div><b data-count="2022">0</b><span>FONDAZIONE</span></div>
+            <div><b>SIC ⟷ MI</b><span>BASE OPERATIVA</span></div>
+            <div><b>24/7</b><span>NIGHT &amp; MUSEUM</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUOTE BAND ===== -->
+    <section class="band" aria-label="Manifesto">
+      <div class="band-track">
+        <span>ORDINE È IL RISULTATO.</span><s>DISORDINE È IL PROCESSO.</s><span>ORDINE È IL RISULTATO.</span><s>DISORDINE È IL PROCESSO.</s>
+        <span>ORDINE È IL RISULTATO.</span><s>DISORDINE È IL PROCESSO.</s><span>ORDINE È IL RISULTATO.</span><s>DISORDINE È IL PROCESSO.</s>
+      </div>
+    </section>
+
+    <!-- ===== COSA FACCIAMO ===== -->
+    <section id="cosa-facciamo" class="sec sec-services" data-hue="200">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title scramble">cosa facciamo</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <ul class="svc" id="svcList">
+        <li data-preview="assets/video/opera-prismatica.mp4"><span class="svc-i">/01</span><span class="svc-t">VIDEOMAPPING</span><span class="svc-d">INDOOR / OUTDOOR / SITE-SPECIFIC</span></li>
+        <li data-preview="assets/video/oneday-render-2.mp4"><span class="svc-i">/02</span><span class="svc-t">PROGETTAZIONE STAGE</span><span class="svc-d">CONCEPT · RENDER 3D · MESSA IN OPERA</span></li>
+        <li data-preview="assets/video/oneday-live-1.mp4"><span class="svc-i">/03</span><span class="svc-t">LEDWALL &amp; CONFIGURAZIONI LED</span><span class="svc-d">IDEAZIONE E SISTEMI</span></li>
+        <li data-preview="assets/video/phase2-live.mp4"><span class="svc-i">/04</span><span class="svc-t">VJING, LIGHT DESIGN &amp; LIVE VISUALS</span><span class="svc-d">CLUB · FESTIVAL · CONCERTI</span></li>
+        <li data-preview="assets/video/interactive-1.mp4"><span class="svc-i">/05</span><span class="svc-t">INSTALLAZIONI IMMERSIVE E INTERATTIVE</span><span class="svc-d">SENSORI · REAL-TIME · PUBBLICO</span></li>
+        <li data-preview="assets/video/opera-crudo-2.mp4"><span class="svc-i">/06</span><span class="svc-t">SCENOGRAFIE DIGITALI</span><span class="svc-d">SPAZIO PROGRAMMATO</span></li>
+        <li data-preview="assets/video/vulkano-1.mp4"><span class="svc-i">/07</span><span class="svc-t">AMBIENTI AUDIO-VISIVI GENERATIVI</span><span class="svc-d">SUONO → IMMAGINE → SPAZIO</span></li>
+      </ul>
+      <div class="svc-preview" id="svcPreview" aria-hidden="true"><video muted loop playsinline></video></div>
+    </section>
+
+    <!-- ===== TECNOLOGIE ===== -->
+    <section id="tecnologie" class="sec sec-tech" data-hue="160">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title scramble">tecnologie</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <div class="tech-wrap">
+        <div class="terminal reveal" aria-label="Elenco tecnologie">
+          <div class="term-bar"><i></i><i></i><i></i><span>vizzz@rig:~/stack</span></div>
+          <pre class="term-body" id="termBody"></pre>
+        </div>
+        <ul class="tech-grid">
+          <li class="reveal"><span>01</span>TOUCHDESIGNER</li>
+          <li class="reveal"><span>02</span>RESOLUME / MADMAPPER</li>
+          <li class="reveal"><span>03</span>CAPTURE / BLENDER</li>
+          <li class="reveal"><span>04</span>SENSORI, MIDI, LASER, OSC</li>
+          <li class="reveal"><span>05</span>SISTEMI LED / PROIEZIONI VIDEO</li>
+          <li class="reveal"><span>06</span>SISTEMI VR</li>
+          <li class="reveal"><span>07</span>DRONISTICA</li>
+          <li class="reveal tech-img"><img src="assets/img/process-01.jpg" alt="Progettazione stage in software 3D" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SPAZIO E LINGUAGGI ===== -->
+    <section id="spazio-e-linguaggi" class="sec sec-space" data-hue="290">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title scramble">spazio e linguaggi</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <div class="space-grid">
+        <figure class="space-media reveal">
+          <img src="assets/img/map-02.jpg" alt="Videomapping su architettura con lettere e codice" loading="lazy">
+          <img src="assets/img/map-05.jpg" alt="" loading="lazy" class="space-media-glitch" aria-hidden="true">
+        </figure>
+        <div class="space-text">
+          <p class="lead reveal">VIZZZVIZZZ ATTRAVERSA IL CAOS DEL PRESENTE, LO INTERPRETA, LO DECODIFICA, E LO CODIFICA IN NARRAZIONI VISUAL, ATTRAVERSO UNA RICERCA ESTETICA, TECNOLOGICA E CONCETTUALE.</p>
+          <p class="reveal">IN QUESTO PROCESSO, LO SPAZIO NON È SEMPLICE CONTENITORE: È <em>ATTIVATO</em>, <em>PROGRAMMATO</em>, <em>RIGENERATO</em>. E I LINGUAGGI NON COMUNICANO: SI SPERIMENTANO.</p>
+          <p class="reveal">UNO STUDIO IL CUI FINE È GENERARE CONSAPEVOLEZZA CRITICA SU UN PRESENTE VISSUTO COME "ESTREMO" E CAOTICO. OGNI LAVORO ESPLORA TEMATICHE RADICALI E PARADIGMI EMERGENTI, DOVE LUCE, COLORI, IMMAGINI PSICHEDELICHE E FRAMMENTATE RIVELANO VERITÀ.</p>
+          <p class="reveal hl">NON È SOLO VISUAL, VIZZZVIZZZ È UNO STATO MENTALE.</p>
+        </div>
+      </div>
+      <p class="big-quote glitch-text" data-text='"RICERCA RADICALE. VISIONE TOTALE."'>"RICERCA RADICALE. VISIONE TOTALE."</p>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="sec sec-portfolio" data-hue="355">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <h2 class="sec-title scramble">portfolio / progetti</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <div class="pf-intro">
+        <p class="lead reveal">DA ANNI COLLABORIAMO CON <b>WITH LOVE</b> E <b>PHASE2</b>, LE PRINCIPALI REALTÀ TECHNO DELLA SICILIA, RICONOSCIUTE IN TUTTA EUROPA.</p>
+        <p class="reveal">PER OGNI EVENTO CURIAMO L'INTERO IMMAGINARIO VISIVO E TECNOLOGICO, DAL CLUB ALLA SPIAGGIA, PROGETTANDO STAGE SITE SPECIFIC IN DIALOGO CON GLI ARTISTI OSPITI. IL NOSTRO LAVORO CON PHASE2 E WITH LOVE SI FONDA SU UN DIALOGO CONTINUO CHE UNISCE IDEAZIONE, PROGETTAZIONE E MESSA IN OPERA DI EVENTI DI GRANDE SCALA.</p>
+      </div>
+
+      <div class="pf-filter" id="pfFilter" role="tablist" aria-label="Filtra progetti">
+        <button class="on" data-f="all">ALL</button>
+        <button data-f="stage">STAGE DESIGN</button>
+        <button data-f="mapping">VIDEOMAPPING</button>
+        <button data-f="vj">VJING</button>
+        <button data-f="install">INSTALLAZIONI</button>
+      </div>
+
+      <div class="pf-grid" id="pfGrid">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== LOCALI E ORGANIZZAZIONI (BANNER A SCORRIMENTO) ===== -->
+    <section class="clients" aria-label="Locali e organizzazioni">
+      <p class="clients-label">// LOCALI E ORGANIZZAZIONI CON CUI ABBIAMO LAVORATO</p>
+      <div class="marquee" id="marquee">
+        <div class="marquee-track">
+          <span class="lg lg-txt lg-wl">WITH <i>♥</i> LOVE</span>
+          <img src="assets/logos/logo-rectangle-industrie.png" alt="Industrie" class="lg">
+          <span class="lg lg-txt lg-p2">P H A S E &nbsp;<b>2</b></span>
+          <img src="assets/logos/logo-drom-outline.png" alt="DRØM" class="lg lg-sq">
+          <span class="lg lg-txt lg-vk">VULKANO <small>SUMMIT FESTIVAL</small></span>
+          <img src="assets/logos/filenzlogo01.png" alt="Filenz — L'isola di Land" class="lg lg-sq">
+          <span class="lg lg-txt lg-op">OPERA <small>FESTIVAL</small></span>
+          <img src="assets/logos/mercatigenerali.png" alt="Mercati Generali" class="lg">
+          <span class="lg lg-txt">LITORANEA</span>
+          <img src="assets/logos/clubbing-favela-3.png" alt="Clubbing Favela" class="lg lg-sq">
+          <span class="lg lg-txt">MYTHOS</span>
+          <img src="assets/logos/ecs-dogana.png" alt="ECS Dogana Club" class="lg lg-sq">
+          <span class="lg lg-txt lg-thin">Bellatrix <small>CLUB</small></span>
+          <span class="lg lg-txt lg-thin">efimera. <small>ON TOUR</small></span>
+          <span class="lg lg-txt lg-thin">H E L M E</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NO SIGNAL ===== -->
+    <section id="no-signal" class="sec sec-nosignal" data-hue="0">
+      <div class="nosig-screen" aria-hidden="true">
+        <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="nosig-label glitch-text" data-text="NO SIGNAL">NO SIGNAL</span>
+      </div>
+      <div class="nosig-body">
+        <p class="manifesto" id="manifesto">CIÒ CHE SI È VENUTO IMPONENDO NEGLI ULTIMI DECENNI È, PIUTTOSTO CHE UN PROGRESSO SOCIALE, CIVICO E CONDIVISO, UN DOMINIO TOTALIZZANTE DI UN SISTEMA ECONOMICO OLIGARCHICO E SOVRANAZIONALE CHE CONTROLLA NON SOLTANTO I SETTORI TRAINANTI DELL'ECONOMIA E DELLA FINANZA MA È IN GRADO DI INFLUENZARE PROFONDAMENTE I GUSTI E GLI ORIENTAMENTI CULTURALI DI MOLTITUDINE DI PERSONE. CIÒ CHE SI REGISTRA È LA PROGRESSIVA RIDUZIONE DEGLI SPAZI DI DIALOGO, CRESCITA COLLETTIVA E AUTOCONSAPEVOLEZZA, A FAVORE DI POTERI CENTRALIZZATI, FORTI ECONOMICAMENTE E STRATEGICAMENTE ORGANIZZATI A LIVELLO SOVRANAZIONALE. IN UN MONDO MEDIALE COSÌ VUOTO, SCADENTE E MONOPOLIZZATO, QUANTO POSSONO ESSERE LIBERE E CONSAPEVOLI LE SCELTE SOCIALI, ETICHE E POLITICHE DI TUTTI NOI, SEMPLICI CITTADINI DIVENUTI, O IN VIA DI DIVENTARE, DEL TUTTO SUDDITI SENZA DIRITTI DI UN DIO ASSOLUTO DI NOME DENARO?! IL FUTURO, UN TEMPO SPERANZA, È DIVENUTO UNA MINACCIA. SOLO NOI STESSI POSSIAMO SALVARE NOI STESSI.</p>
+        <p class="nosig-end">LO SCOPO DI VIZZZVIZZZ È IL SUO MESSAGGIO.<br><span class="code-hide">NASCOSTO NEL CODICE.</span><br><span class="dark-show">VISIBILE NEL BUIO.</span></p>
+      </div>
+    </section>
+
+    <!-- ===== CONTATTI ===== -->
+    <section id="contatti" class="sec sec-contact" data-hue="120">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <h2 class="sec-title scramble">contatti</h2>
+        <span class="sec-rule"></span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-main">
+          <p class="contact-big reveal">HAI UNO SPAZIO<br>DA <span class="acc">ATTIVARE</span>?</p>
+          <p class="reveal">CLUB, FESTIVAL, MUSEI, BRAND, ARTISTI. RACCONTACI IL TUO PROGETTO: PROGETTIAMO L'IMMAGINARIO VISIVO E TECNOLOGICO, DAL CONCEPT ALLA MESSA IN OPERA.</p>
+          <div class="contact-links reveal">
+            <a href="https://www.instagram.com/vizzz.vizzz/" target="_blank" rel="noopener" class="btn">
+              <span>INSTAGRAM</span><b>@vizzz.vizzz ↗</b>
+            </a>
+            <a href="https://www.vizzzvizzz.it" class="btn btn--ghost">
+              <span>WEB</span><b>www.vizzzvizzz.it</b>
+            </a>
+          </div>
+          <dl class="contact-info reveal">
+            <div><dt>BASE</dt><dd>SICILIA — MILANO</dd></div>
+            <div><dt>STATUS</dt><dd><span class="dot"></span> ONLINE // DISPONIBILI PER BOOKING</dd></div>
+            <div><dt>FORMA</dt><dd>ASSOCIAZIONE CULTURALE</dd></div>
+          </dl>
+        </div>
+        <figure class="contact-art reveal">
+          <img src="assets/img/art-02.jpg" alt="VIZZZ — artwork" loading="lazy">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr">
+    <div class="ftr-wm" aria-hidden="true">VIZZZVIZZZ</div>
+    <div class="ftr-row">
+      <span>© <span id="year">2026</span> VIZZZ.VIZZZ — ASSOCIAZIONE CULTURALE</span>
+      <span>NASCOSTO NEL CODICE. VISIBILE NEL BUIO.</span>
+      <a href="#home">TORNA SU ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+    <div class="modal-bg" data-close></div>
+    <div class="modal-box">
+      <header class="modal-head">
+        <div>
+          <span class="modal-idx" id="mIdx">[01]</span>
+          <h3 id="mTitle">TITLE</h3>
+          <p id="mMeta">META</p>
+        </div>
+        <button class="modal-x" data-close aria-label="Chiudi">✕</button>
+      </header>
+      <p class="modal-desc" id="mDesc"></p>
+      <div class="modal-stage" id="mStage"></div>
+      <div class="modal-thumbs" id="mThumbs"></div>
+      <div class="modal-nav">
+        <button id="mPrev" aria-label="Precedente">← PREV</button>
+        <span id="mCount">01 / 10</span>
+        <button id="mNext" aria-label="Successivo">NEXT →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/codebg.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
